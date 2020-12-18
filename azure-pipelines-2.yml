@@ -27,16 +27,11 @@ stages:
         dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
-
-  - job: Run
-    displayName: Run Cypress
-    pool:
-      vmImage: 'ubuntu-latest'
-    steps:
-      - script: npm run start
-        displayName: start
-      - script: npm run cy-db
-        displayName: cy-db
+    - script: npm run start
+      displayName: npm start
+    - script: npm run cy-db
+      displayName: cy-db
+      
 
         
 
