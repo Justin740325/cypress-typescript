@@ -11,6 +11,7 @@ COPY package.json package-lock.json ./
 # copy Cypress tests
 COPY cypress.json cypress ./
 COPY cypress ./cypress
+COPY node_modules ./node_modules
 
 # avoid many lines of progress bars during install
 # https://github.com/cypress-io/cypress/issues/1243
