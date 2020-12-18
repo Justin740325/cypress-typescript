@@ -1,6 +1,6 @@
 {
   "pluginsFile": false,
   "supportFile": false,
-  "baseUrl": "https://172.16.3.139",
+  "baseUrl": "https://example.cypress.io/commands/actions",
   "projectId": "px63jc"
 }

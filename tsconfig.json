@@ -8,6 +8,6 @@
     "noEmit": true
   },
   // only compile the production TS files
-  "include": ["src/*.ts"],
+  "include": ["src/*.ts", "cypress/integration/login.spec.ts"],
   "exclude": ["src/*.test.ts"]
 }
