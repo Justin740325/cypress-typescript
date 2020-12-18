@@ -8,8 +8,6 @@ RUN npm --version
 WORKDIR /home/node/app
 # copy our test application
 COPY package.json package-lock.json ./
-# copy tsconfig.json
-COPY tsconfig.json ./
 # copy Cypress tests
 COPY cypress.json cypress ./
 COPY cypress ./cypress
@@ -22,5 +20,3 @@ ENV CI=1
 RUN npm ci
 # check if the binary was installed successfully
 RUN $(npm bin)/cypress verify
-
-RUN $(npm bin)/cypress run --record --key fe907849-d826-4996-b4b6-f2d14a738f09
