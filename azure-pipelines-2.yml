@@ -27,3 +27,15 @@ stages:
         dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
+    - script: npm install --save typescript
+      displayName: npm install
+    - script: npm run start
+      displayName: npm start
+    - script: npm run cy-db
+      displayName: cy-db
+      
+
+        
+
+
+
