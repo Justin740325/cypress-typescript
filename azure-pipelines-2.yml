@@ -27,3 +27,19 @@ stages:
         dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
+
+  - job: Run
+    displayName: Run Cypress
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '10.x'
+
+      - script: npm install --save typescript
+      - script: npm run start
+        
+
+
+
