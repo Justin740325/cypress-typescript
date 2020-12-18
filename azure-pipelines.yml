@@ -18,5 +18,4 @@ steps:
 - script: |
     npm install --save typescript
     npm run start
-    npm run cy-db 
   displayName: 'npm install and build'
