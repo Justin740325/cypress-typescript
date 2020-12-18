@@ -7,11 +7,13 @@ RUN node --version
 RUN npm --version
 WORKDIR /home/node/app
 # copy our test application
-COPY package.json package-lock.json ./
 # copy Cypress tests
 COPY cypress.json cypress ./
 COPY cypress ./cypress
-COPY node_modules ./node_modules
+COPY package.json package-lock.json ./
+COPY renovate.json ./
+COPY tsconfig.json tsconfig.lint.json ./
+COPY jest.config.js ./
 
 # avoid many lines of progress bars during install
 # https://github.com/cypress-io/cypress/issues/1243
