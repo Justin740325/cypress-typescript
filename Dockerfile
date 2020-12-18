@@ -21,4 +21,10 @@ RUN npm ci
 # check if the binary was installed successfully
 RUN $(npm bin)/cypress verify
 
-RUN $(npm bin)/cypress run
+RUN $(npm bin)/npm install --save typescript
+
+RUN $(npm bin)/npm run start
+RUN $(npm bin)/npm run cy-db
+
+
+
