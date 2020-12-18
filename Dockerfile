@@ -8,8 +8,8 @@ RUN npm --version
 WORKDIR /home/node/app
 # copy our test application
 COPY package.json package-lock.json ./
-# COPY app ./app
-# COPY serve.json ./
+# copy tsconfig.json
+COPY tsconfig.json ./
 # copy Cypress tests
 COPY cypress.json cypress ./
 COPY cypress ./cypress
