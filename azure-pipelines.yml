@@ -18,4 +18,5 @@ steps:
 - script: |
     npm install --save typescript
     npm run start
+    npm cy
   displayName: 'npm install and build'
