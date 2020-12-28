@@ -10,5 +10,6 @@
   "include": [
     "../node_modules/cypress",
     "./*/*.ts"
-, "../src/login.spec.ts"  ]
+, "../src/login.spec.ts", "page/admin/base/baseSetting.po.ts", "page/admin/base/adminDashboard.po.ts"  ]
 }
+

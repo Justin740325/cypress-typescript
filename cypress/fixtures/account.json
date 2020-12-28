@@ -2,5 +2,13 @@
     "admin":{
         "account": "admin",
         "password": "123456"
+    },
+    "bpmmr":{
+        "account": "bpmmr",
+        "password": "123456"
+    },
+    "bpmuser":{
+        "account": "bpmuser",
+        "password": "123456"
     }
 }

@@ -1,0 +1,172 @@
+{
+  "Cypress base describe": {
+    "prefix": "cy-describe-base",
+    "description": "describe",
+    "body": [
+      "describe('${1:description}', () => {",
+      "\tlet page: ${2:XxxPage};",
+      "",
+      "\tbeforeEach(() => {",
+      "\t\tpage = new ${2:XxxPage}();",
+      "",
+      "\t\tpage.navigateTo();",
+      "\t})",
+      "",
+      "\t${4}",
+      "",
+      "})",
+      ""
+    ]
+  },
+  "Cypress describe": {
+    "prefix": "cy-describe",
+    "description": "describe",
+    "body": [
+      "describe('${1:description}', () => {",
+      "",
+      "\tbeforeEach(() => {",
+      "\t\t${2:page.navigateTo();}",
+      "\t})",
+      "",
+      "${3}",
+      "})",
+      ""
+    ]
+  },
+
+  "Cypress if else": {
+    "prefix": "cy-if-else",
+    "description": "describe",
+    "body": [
+      "cy.get('body').then((\\$body) => {",
+      "\tif (\\$body.find('${1:selector}').length) {",
+      "\t\t// found it",
+      "\t\t${2}",
+      "\t} else {",
+      "\t\t// not here",
+      "\t\t${3}",
+      "\t}",
+      "});",
+      ""
+    ]
+  },
+
+  "Cypress It Function": {
+    "prefix": "cy-it-function",
+    "description": "Cypress It",
+    "body": [
+      "it('${1:XXX}，應該${2:XXX}', () => {",
+      "\t// arrange\n",
+      "\t${3}",
+      "\t// act\n",
+      "\t// assert",
+      "});"
+    ]
+  },
+
+  "Cypress Page Base": {
+    "prefix": "cy-page-class",
+    "description": "page class",
+    "body": [
+      "import { PageBase } from \"page/pageBase.po\";",
+      "",
+      "export class ${1:Name}Page extends PageBase {",
+      "",
+      "\tnavigateTo() {",
+      "\t\tcy.visit('/${2:auth/login}');",
+      "\t}",
+      "",
+      "${3}",
+      "",
+      "}",
+      ""
+    ]
+  },
+
+  "Cypress Page Input function": {
+    "prefix": "cy-page-input-function",
+    "description": "page input function",
+    "body": [
+      "input${1:Name}(text: string, clearText: boolean = true) {",
+      "\tconst ipt = cy.get('input[formcontrolname=\"${2:formName}\"]');",
+      "\tif (clearText) ipt.clear();",
+      "\tif (text === '') return;",
+      "\tipt.type(text);",
+      "}",
+      ""
+    ]
+  },
+
+  "Cypress Page Click Button function": {
+    "prefix": "cy-page-click-btn-function",
+    "description": "page click btn function",
+    "body": [
+      "click${1:BtnName}() {",
+      "\tcy.get('button[uof-i18n-key=\"${2:key}\"]').click();",
+      "}",
+      ""
+    ]
+  },
+
+  "Cypress Page Click Icon function": {
+    "prefix": "cy-page-click-iconBtn-function",
+    "description": "page click iconBtn function",
+    "body": [
+      "click${1:IconName}() {",
+      "\tcy.get('button >uof-icon[uofname=\"${2:u-menu}\"]').click();",
+      "}",
+      ""
+    ]
+  },
+
+  "Cypress Page Click ul li function": {
+    "prefix": "cy-page-click-ul-li-function",
+    "description": "page click ul li",
+    "body": [
+      "click${1:ItemName}() {",
+      "\tcy.get('ul >li >span[uof-i18n-key=\"${2:key}\"]').click();",
+      "}",
+      ""
+    ]
+  },
+
+  "Cypress Page should func": {
+    "prefix": "cy-page-should-function",
+    "description": "page should func",
+    "body": [
+      "should${1:Name}() {",
+      "\tcy.get('${2:selector}').should('${3:exist}');",
+      "}",
+      ""
+    ]
+  },
+
+  "Cypress Dialog class": {
+    "prefix": "cy-dialog-class",
+    "description": "dialog class",
+    "body": [
+      "import { DialogBase } from \"page/dialogBase.po\";",
+      "",
+      "export class ${1:Name}Dialog extends DialogBase {",
+      "\tselector = 'ejs-dialog.e-popup-open ${2:youSelector}';",
+      "\t",
+      "\t${3}",
+      "}",
+      ""
+    ]
+  },
+
+  "Cypress Dialog input function": {
+    "prefix": "cy-dialog-input-function",
+    "description": "dialog input function",
+    "body": [
+      "input${1:Name}(text: string, clearText: boolean = true) {",
+      "\tconst ipt = this.dialogBody().find('input[formcontrolname=\"${2:formName}\"]');",
+      "\tif (clearText) ipt.clear();",
+      "\tif (text === '') return;",
+      "\tipt.type(text);",
+      "}",
+      ""
+    ]
+  }
+}

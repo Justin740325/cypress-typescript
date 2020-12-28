@@ -5,9 +5,18 @@
     "lib": ["ES2015", "DOM"],
     "strict": true,
     "types": ["jest"],
-    "noEmit": true
+    "noEmit": true,
+    "baseUrl": "cypress/",
+    "paths": {
+      "@page": [
+        "page/"
+      ],
+      "@integration": [
+        "integration/"
+      ]
+    }
   },
   // only compile the production TS files
-  "include": ["src/*.ts", "cypress/integration/login.spec.ts"],
+  "include": ["src/*.ts", "cypress/integration/login.e2e-spec.tsc.ts"],
   "exclude": ["src/*.test.ts"]
 }
