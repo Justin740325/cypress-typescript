@@ -17,8 +17,9 @@ steps:
 
 
 
-- script: |
-    npm run start
-    npm cy
-  displayName: 'npm start and test'
+- script: npm run start
+  displayName: 'npm start'
+
+- script: npm run cy
+  displayName: 'cypress test'
   
