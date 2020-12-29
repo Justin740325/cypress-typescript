@@ -16,7 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install --save typescript
+    # npm install --save typescript
     npm run start
     npm cy
   displayName: 'npm install and build'
