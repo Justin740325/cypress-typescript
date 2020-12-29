@@ -15,8 +15,11 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
+- script: npm install --save typescript
+  displayName: 'install typescript'
 
+- script: |
     npm run start
     npm cy
-  displayName: 'npm install and build'
+  displayName: 'npm start and test'
+  
